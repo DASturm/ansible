@@ -1,0 +1,32 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Macbook VMs
+
+[virtual]
+minibox ansible_host:"192.168.56.104"   
+data    ansible_host:"192.168.56.105"
+twotac  ansible_host:"192.168.56.106"
+
+[virtual:vars]
+ansible_user:"dsturm"
+
+[externalvms]
+data    ansible_host:"192.168.56.105"
+twotac  ansible_host:"192.168.56.106"
+
+[externalvms:vars]
+ansible_user:"dsturm"
+
+[localvms]
+minibox ansible_host:"192.168.56.104"
+
+[localvms:vars]
+ansible_user:"dsturm"
