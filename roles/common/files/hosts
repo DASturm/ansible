@@ -11,22 +11,20 @@
 # Ex 1: Macbook VMs
 
 [virtual]
-minibox ansible_host:"192.168.56.104"   
-data    ansible_host:"192.168.56.105"
-twotac  ansible_host:"192.168.56.106"
+minibox ansible_host=192.168.56.104
+data    ansible_host=192.168.56.105
+twotac  ansible_host=192.168.56.106
 
 [virtual:vars]
-ansible_user:"dsturm"
+ansible_user="dsturm"
 
 [externalvms]
-data    ansible_host:"192.168.56.105"
-twotac  ansible_host:"192.168.56.106"
+data    ansible_host=192.168.56.105
+twotac  ansible_host=192.168.56.106
 
 [externalvms:vars]
-ansible_user:"dsturm"
 
 [localvms]
-minibox ansible_host:"192.168.56.104"
+minibox ansible_host=192.168.56.104
 
 [localvms:vars]
-ansible_user:"dsturm"
