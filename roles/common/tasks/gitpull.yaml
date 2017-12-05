@@ -1,8 +1,9 @@
 ---
--name: Loading and Updating Repositories
+tasks:
+- name: Loading and Updating Repositories
   git:
     repo: {{ item.repo }}
     dest: ~/git/{{ item.name }}
     clone: yes
     update: yes
-  with_items: "{{ gitconfig }}"
+  with_items: {{ gitconfig }}
