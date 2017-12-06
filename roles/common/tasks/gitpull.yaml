@@ -1,8 +1,10 @@
 ---
-- name: Loading and Updating Repositories
-  git:
-    repo: {{ item.repo }}
-    dest: ~/git/{{ item.name }}
-    clone: yes
-    update: yes
-  with_items: {{ gitconfig }}
+- hosts: all
+  tasks:
+    - name: Loading and Updating Repositories
+      git:
+        repo: {{ item.repo }}
+        dest: ~/git/{{ item.name }}
+        clone: yes
+        update: yes
+      with_items: {{ gitconfig }}
