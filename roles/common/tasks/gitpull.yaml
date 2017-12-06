@@ -1,5 +1,4 @@
 ---
-tasks:
 - name: Loading and Updating Repositories
   git:
     repo: {{ item.repo }}

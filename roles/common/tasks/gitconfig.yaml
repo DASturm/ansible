@@ -1,5 +1,4 @@
 ---
-tasks:
 - name: Distribute Configuration File
   file:
     src: "../files/.gitconfig"
