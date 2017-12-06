@@ -1,6 +1,11 @@
 ---
 - hosts: all
   tasks:
+    - name: Checking Repository Destinations
+      file:
+        path: ~/git/"{{ item.name }}"
+        state: directory
+
     - name: Loading and Updating Repositories
       git:
         repo: "{{ item.repo }}"

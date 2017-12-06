@@ -4,7 +4,7 @@ hostdata:
 	- {ip: "192.168.56.106", hostname: "twotac"}
 
 gitconfig:
-	- {repo:"https://github.com/DASturm/ansible.git", name: "ansible"}
+	- {repo:"https://github.com/DASturm/twotac.git", name: "twotac"}
 
 apps:
 	- {}
