@@ -2,8 +2,9 @@
 - hosts: all
   tasks:
     - name: Distribute Configuration File
-      file:
+      copy:
         src: "../files/.gitconfig"
         dest: "~/.gitconfig"
         owner: "dsturm" 
+        state: present
         mode: 0664
