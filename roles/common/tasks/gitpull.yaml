@@ -12,4 +12,4 @@
         dest: ~/git/{{ item.name }}
         clone: yes
         update: yes
-      with_items: {{ gitconfig }}
+      with_items: "{{ gitconfig }}"
