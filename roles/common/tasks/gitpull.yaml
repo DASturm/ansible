@@ -8,7 +8,7 @@
 
     - name: Loading and Updating Repositories
       git:
-        repo: {{ item.repo }}
+        repo: "{{ item.repo }}"
         dest: ~/git/{{ item.name }}
         clone: yes
         update: yes
