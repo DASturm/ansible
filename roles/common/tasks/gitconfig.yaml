@@ -1,11 +1,10 @@
 ---
-hosts: all
-tasks:
-  - name: Distribute Configuration File
-    file:
-      src: "../files/.gitconfig"
-      dest: "~/.gitconfig"
-      state: present"
-      owner: "dsturm" 
-      mode: 0664
-  
+- hosts: all
+  tasks:
+    - name: Distribute Configuration File
+      file:
+        src: "../files/.gitconfig"
+        dest: "~/.gitconfig"
+        state: present"
+        owner: "dsturm" 
+        mode: 0664
