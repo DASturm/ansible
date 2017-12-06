@@ -5,6 +5,6 @@
       file:
         src: "../files/.gitconfig"
         dest: "~/.gitconfig"
-        state: present"
+        state: present
         owner: "dsturm" 
         mode: 0664
