@@ -1,8 +1,10 @@
 ---
-- name: Distribute Configuration File
-  file:
-    src: "../files/.gitconfig"
-    dest: "~/.gitconfig"
-    state: present"
-    owner: "dsturm" 
-    mode: 0664
+tasks:
+  - name: Distribute Configuration File
+    file:
+      src: "../files/.gitconfig"
+      dest: "~/.gitconfig"
+      state: present"
+      owner: "dsturm" 
+      mode: 0664
+  
