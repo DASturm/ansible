@@ -6,6 +6,7 @@
       file:
         path: ~/git/{{ gitconfig.name }}
         state: directory
+      with_items: "{{ gitconfig }}"
 
     - name: Loading and Updating Repositories
       git:
