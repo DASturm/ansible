@@ -1,7 +1,7 @@
 # Data
 
 hostdata:
-	- {ip: "192.168.56.105", hostname: "data"}
+	- { ip: "192.168.56.105", hostname: "data" }
 
 apps:
 	- {}
