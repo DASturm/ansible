@@ -3,14 +3,14 @@
   tasks:
     - name: Checking Repository Destinations
       file:
-        path: ~/git/{{ hostvars[item]['gitconfig']['name'] }}
+        path: ~/git/{{ hostvars['gitconfig']['name'] }}
         state: directory
 #      with_items: hostvars[gitconfig]
 
     - name: Loading and Updating Repositories
       git:
-        repo: "{{ hostvars[item]['gitconfig']['repo'] }}"
-        dest: ~/git/{{ hostvars[item]['gitconfig']['name'] }}
+        repo: "{{ hostvars['gitconfig']['repo'] }}"
+        dest: ~/git/{{ hostvars['gitconfig']['name'] }}
         clone: yes
         update: yes
 #      with_items: hostvars[gitconfig]
