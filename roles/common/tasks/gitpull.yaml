@@ -4,14 +4,14 @@
   tasks:
     - name: Checking Repository Destinations
       file:
-        path: ~/git/{{ item.name }}
+        path: ~/git/{{ name }}
         state: directory
       with_items: "{{ gitconfig }}"
 
     - name: Loading and Updating Repositories
       git:
-        repo: "{{ item.repo }}"
-        dest: ~/git/{{ item.name }}
+        repo: "{{ repo }}"
+        dest: ~/git/{{ name }}
         clone: yes
         update: yes
       with_items: "{{ gitconfig }}"
