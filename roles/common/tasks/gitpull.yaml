@@ -1,13 +1,12 @@
 ---
 - hosts: all
-  gather_facts: yes
   tasks:
     - name: Checking Repository Destinations
       file:
         path: ~/git/{{ gitconfig.name }}
         state: directory
       with_items: "{{ gitconfig }}"
-
+      
     - name: Loading and Updating Repositories
       git:
         repo: "{{ gitconfig.repo }}"
