@@ -1,5 +1,5 @@
+---
 # Minibox
-
 hostdata:
 	- { ip: "192.168.56.104", hostname: "minibox" }
 
