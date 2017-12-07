@@ -9,11 +9,3 @@ gitconfig:
 	
 apps:
   - {}
-
-
-hostdata:
-  - { ip: "192.168.56.106", hostname: "twotac" }
-
-
-apps:
-  - {}
