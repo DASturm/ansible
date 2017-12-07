@@ -6,7 +6,7 @@
       file:
         path: ~/git/{{ name }}
         state: directory
-      with_items: "{{ gitconfig }}"
+#      with_items: "{{ gitconfig }}"
 
     - name: Loading and Updating Repositories
       git:
@@ -14,4 +14,4 @@
         dest: ~/git/{{ name }}
         clone: yes
         update: yes
-      with_items: "{{ gitconfig }}"
+#      with_items: "{{ gitconfig }}"
