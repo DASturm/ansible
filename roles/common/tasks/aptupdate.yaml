@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Adding Apt Repositories
+      apt_repository:
+        repo: "{{ item.id }}"
+        state: present
+      with_items: aptrepos
+
+    - name: Downloading Applications
+      apt:
+        name: "{{ item.id }}"
+        state: present
+        update_cache: yes
+        upgrade: yes
+      with_items: "{{ apps }}"
