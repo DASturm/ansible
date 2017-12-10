@@ -8,4 +8,4 @@
     - debug:
         msg: "{{ hostvars[inventory_hostname].keys() }}"
     - debug:
-        msg: "{{ hostvars[inventory_hostname].apps() }}"
+        msg: "{{ hostvars[apps] }}"
