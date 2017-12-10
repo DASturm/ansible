@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: no
+  vars:
+    testvar: hello
+  tasks:
+    - debug:
+      msg: "{{ testvar }}"
+    - debug:
+      msg: "{{ hostvars[inventory_hostname] }}"
