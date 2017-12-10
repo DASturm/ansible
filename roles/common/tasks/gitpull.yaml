@@ -7,7 +7,7 @@
         path: ~/git/{{ item.name }}
         state: directory
       with_items: 
-        - "{{ gitconfig }}"
+        - "{{ hostvars[inventory_hostname]['gitconfig'] }}"
 
     - name: Loading and Updating Repositories
       git:
@@ -16,4 +16,4 @@
         clone: yes
         update: yes
       with_items: 
-        - "{{ gitconfig }}"
+        - "{{ hostvars[inventory_hostname]['gitconfig'] }}"
