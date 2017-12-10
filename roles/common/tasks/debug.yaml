@@ -6,6 +6,6 @@
     - debug:
         msg: "{{ testvar }}"
     - debug:
-        msg: "{{ hostvars['inventory_hostname']['gitconfig'].item() }}"
+        msg: "{{ hostvars[inventory_hostname]['gitconfig'].item() }}"
     - debug:
         msg: "{{ hostvars[inventory_hostname] }}"
