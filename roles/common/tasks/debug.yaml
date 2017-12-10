@@ -9,3 +9,4 @@
         msg: "{{ hostvars[inventory_hostname].keys() }}"
     - debug:
         msg: "{{ hostvars[inventory_hostname]['gitconfig'].repo() }}"
+      with_items: "{{ gitconfig }}"
