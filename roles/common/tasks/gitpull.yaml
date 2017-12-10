@@ -6,7 +6,7 @@
       file:
         path: ~/git/{{ item.name }}
         state: directory
-      with_dict: 
+      with_items: 
         - "{{ hostvars['gitconfig'] }}"
 
     - name: Loading and Updating Repositories
@@ -15,5 +15,5 @@
         dest: ~/git/{{ item.name }}
         clone: yes
         update: yes
-      with_dict: 
+      with_items: 
         - "{{ hostvars['gitconfig'] }}"
