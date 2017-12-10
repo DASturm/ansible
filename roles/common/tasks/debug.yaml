@@ -4,6 +4,8 @@
     testvar: hello
   tasks:
     - debug:
-      msg: "{{ testvar }}"
+        msg: "{{ testvar }}"
     - debug:
-      msg: "{{ hostvars[inventory_hostname] }}"
+        msg: "{{ hostvars['inventory_hostname']['gitconfig'].item() }}"
+    - debug:
+        msg: "{{ hostvars[inventory_hostname] }}"

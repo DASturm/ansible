@@ -11,7 +11,7 @@
 
     - name: Loading and Updating Repositories
       git:
-        repo: "{{ hhostvars['inventory_hostname']['gitconfig']['repo'] }}"
+        repo: "{{ hostvars['inventory_hostname']['gitconfig']['repo'] }}"
         dest: ~/git/{{ hostvars['inventory_hostname']['gitconfig']['name'] }}
         clone: yes
         update: yes
