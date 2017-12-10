@@ -1,11 +1,16 @@
 ---
 # Minibox
 hostdata:
-  - { ip: "192.168.56.104", hostname: "minibox" }
+  ip: "192.168.56.104" 
+  hostname: "minibox"
 
 gitconfig:
-  - { repo: "https://github.com/DASturm/twotac.git", name:"twotac" }
-  - { repo: "https://github.com/DASturm/ansible.git", name: "ansible" }
+  twotac:
+    repo: "https://github.com/DASturm/twotac.git" 
+    name:"twotac" 
+  ansible:
+    repo: "https://github.com/DASturm/ansible.git"
+    name: "ansible" }
 	
 apps:
   - {puppetmaster, puppet, ansible,}
