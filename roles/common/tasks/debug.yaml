@@ -5,7 +5,7 @@
   tasks:
     - debug:
         msg: "{{ testvar }}"
-#    - debug:
-#        msg: "{{ hostvars[inventory_hostname][gitconfig].item() }}"
     - debug:
         msg: "{{ hostvars[inventory_hostname] }}"
+    - debug:
+        msg: "{{ hostvars[gitconfig] }}"
