@@ -6,7 +6,7 @@
       file:
         path: ~/git/{{ item.name }}
         state: directory
-      with_items: "{{ hostvars[inventory_hostname]['gitconfig'] }}"
+      with_items: "{{ hostvars[inventory_hostname]['gitconfig']|default([]) }}"
 
     - name: Loading and Updating Repositories
       git:
@@ -14,4 +14,4 @@
         dest: ~/git/{{ item.name }}
         clone: yes
         update: yes
-      with_items: "{{ hostvars[inventory_hostname]['gitconfig'] }}"
+      with_items: "{{ hostvars[inventory_hostname]['gitconfig']|default([]) }}"
