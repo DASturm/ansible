@@ -4,15 +4,15 @@
   tasks:
     - name: Checking Repository Destinations
       file:
-        path: ~/git/{{ hostvars.host.gitconfig.name }}
+        path: ~/git/{{ hostvars[item].name }}
         state: directory
 #      with_items: 
 #        - "{{ hostvars[ansible_host]['gitconfig'] }}"
 
     - name: Loading and Updating Repositories
       git:
-        repo: "{{ hostvars.host.gitconfig.repo }}"
-        dest: ~/git/{{ hostvars.host.gitconfig.name }}
+        repo: "{{ hhostvars[item].repo }}"
+        dest: ~/git/{{ hostvars[item].name }}
         clone: yes
         update: yes
 #      with_items: 
