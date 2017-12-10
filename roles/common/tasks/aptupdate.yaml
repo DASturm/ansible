@@ -6,7 +6,7 @@
       apt_repository:
         repo: "{{ item.id }}"
         state: present
-      with_items: aptrepos
+      with_items: "{{ hostvars[inventory_hostname]['aptrepos'] }}"
 
     - name: Downloading Applications
       apt:
@@ -14,4 +14,4 @@
         state: present
         update_cache: yes
         upgrade: yes
-      with_items: "{{ apps }}"
+      with_items: "{{ hostvars[inventory_hostname]['apps'] }}"

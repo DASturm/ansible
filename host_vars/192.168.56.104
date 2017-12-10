@@ -8,7 +8,7 @@ gitconfig:
   - { repo: "https://github.com/DASturm/ansible.git", name: "ansible" }
 	
 apps:
-  - {}
+  - {puppetmaster, puppet, ansible,}
 
 aptrepos:
   - {}
