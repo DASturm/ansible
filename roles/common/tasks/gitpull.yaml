@@ -6,8 +6,8 @@
       file:
         path: ~/git/{{ hostvars['inventory_hostname']['gitconfig']['name'] }}
         state: directory
-#      with_items: 
-#        - "{{ hostvars[ansible_host]['gitconfig'] }}"
+      with_items: 
+        - "{{ hostvars.'gitconfig'() }}"
 
     - name: Loading and Updating Repositories
       git:
@@ -15,5 +15,5 @@
         dest: ~/git/{{ hostvars['inventory_hostname']['gitconfig']['name'] }}
         clone: yes
         update: yes
-#      with_items: 
-#        - "{{ hostvars[['gitconfig'] }}"
+      with_items: 
+        - "{{ hostvars.'gitconfig'() }}"
